@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>SlideShow</title>
+    
+    <script>
+      var i=0; // start point
+      var images =[];
+      var time = 3000;
+
+      // image list
+
+      images[0] = 'image1.jpg';
+      images[1] = 'image2.jpg';
+      images[2] = 'image3.jpg';
+
+      //change image
+
+      function changeImg(){
+          document.slide.src = images[i];
+
+          if (i<images.length - 1){
+              i++;
+          } else {
+              i=0;
+          }
+
+          setTimeout("changeImg()", time);
+      }
+
+      window.onload = changeImg;
+    </script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+        <div class="">
+            <h1 class="navbar-item title is-large"><a href="../index.html">Broony</a></h1>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Cheat Sheets
+          </a>
+      
+          <div class="navbar-dropdown">
+            <a href="\bulma\index.html" class="navbar-item">
+              Bulma
+            </a>
+            <a class="navbar-item">
+              Not Used
+            </a>
+            <a class="navbar-item">
+              Not Used
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">
+              Version 0.0.1
+            </div>
+          </div>
+        </div>
+         <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Traversy Media Tutrorials
+          </a>
+      
+          <div class="navbar-dropdown">
+            <a href="\LocationFinder\index.html" class="navbar-item">
+              Location Finder
+            </a>
+            <a href="\slideShow\index.html" class="navbar-item">
+              Simple JS Slideshow
+            </a>
+            <a class="navbar-item">
+              Not Used
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">
+              Version 0.0.1
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="notification is-info">
+               This is the cheat sheet created through traversy media to show Bulma elements, from video at <a href="https://www.youtube.com/watch?v=IiPQYQT2-wg"><i class="fa fa-youtube"></i> YouTube</a>
+               </div>
+    <img name="slide" width="400" height="200">
+</body>
+</html>
