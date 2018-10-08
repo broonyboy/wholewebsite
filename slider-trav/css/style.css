@@ -21,7 +21,7 @@ body,
 }
 
 .slide1 {
-    background-image: url('/img/image1.jpeg');
+    background-image: url('img/image1.jpeg');
 }
 
 .slide2 {
